@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antony Smith - Creative Portfolio</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background: linear-gradient(to right, #E7E7E7, white, #E7E7E7);
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .word_split {
+      width: 270px;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    .word {
+      display: block;
+      text-align: justify;
+      font-family: "BenchNine";
+      line-height: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .word1 { 
+      font-size: 6.3em; 
+      animation-delay: 0.1s;
+    }
+    .word2 { 
+      font-size: 8.1em; 
+      animation-delay: 0.2s;
+    }
+    .word3 { 
+      font-size: 4.8em; 
+      animation-delay: 0.3s;
+    }
+    .word4 { 
+      font-size: 6.4em; 
+      animation-delay: 0.4s;
+    }
+    .word5 { 
+      font-size: 3.8em; 
+      animation-delay: 0.5s;
+    }
+    .word6 { 
+      font-size: 6em; 
+      animation-delay: 0.6s;
+    }
+    .word7 { 
+      font-size: 4.5em; 
+      animation-delay: 0.7s;
+    }
+    .word8 { 
+      font-size: 4.8em; 
+      animation-delay: 0.8s;
+    }
+    .word9, .word11 { 
+      font-size: 7.9em; 
+      animation-delay: 0.9s;
+    }
+    .word10 { 
+      font-size: 4.9em; 
+      animation-delay: 1.0s;
+    }
+    .word12 { 
+      font-size: 8.2em; 
+      animation-delay: 1.1s;
+    }
+    .word13 { 
+      font-size: 7.8em; 
+      animation-delay: 1.2s;
+    }
+
+    .word1, .word2 { color: #9BC5DE; }
+    .word3, .word4 { color: #90B3C9; }
+    .word5, .word6 { color: #809BB0; }
+    .word7 { color: #6B7B8A; }
+    .word8, .word9 { color: #8B8091; }
+    .word10, .word11 { color: #B68FA2; }
+    .word12, .word13 { color: #D99AB5; }
+
+    .bubble {
+      height: 150px;
+      width: 250px;
+      padding: 20px;
+      position: absolute;
+      color: white;
+      background-color: #99C5DE;
+      font-family: "Open Sans Condensed";
+      font-size: 14px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: bubblePop 0.6s ease-out forwards;
+    }
+
+    @keyframes bubblePop {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .bubble:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .bubble1 {
+      height: 75px;
+      width: 75px;
+      border-radius: 0 20px 0 20px;
+      top: 0;
+      left: -100px;
+      padding: 10px;
+      font-size: 1.5em;
+      line-height: 1;
+      animation-delay: 1.3s;
+    }
+
+    .the-arrow1 {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 0px solid #99C5DE;
+      border-bottom: 12px solid #99C5DE;
+      position: absolute;
+      top: 63px;
+      left: 75px;
+      transform: rotateY(180deg);
+    }
+
+    .bubble2 {
+      height: 150px;
+      width: 170px;
+      border-radius: 30px 0 30px 0;
+      left: 100%;
+      top: 20px;
+      animation-delay: 1.4s;
+    }
+
+    .the-arrow2 {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 0px solid #99C5DE;
+      border-bottom: 20px solid #99C5DE;
+      position: absolute;
+      top: 130px;
+      left: -19px;
+    }
+
+    .bubble3 {
+      height: 200px;
+      background-color: #90B2CB;
+      border-radius: 30px 0 30px 0;
+      top: 183px;
+      left: -280px;
+      animation-delay: 1.5s;
+    }
+
+    .the-arrow3 {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 0px solid #90B2CB;
+      border-bottom: 20px solid #90B2CB;
+      position: absolute;
+      top: 0;
+      left: 250px;
+      transform: rotate(180deg);
+    }
+
+    .bubble4 {
+      height: 180px;
+      background-color: #809BAE;
+      border-radius: 30px 0 30px 0;
+      top: 260px;
+      left: 280px;
+      animation-delay: 1.6s;
+    }
+
+    .the-arrow4 {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 0px solid #809BAE;
+      border-bottom: 20px solid #809BAE;
+      position: absolute;
+      top: 160px;
+      left: -19px;
+    }
+
+    .bubble5 {
+      height: 200px;
+      background-color: #697A8A;
+      border-radius: 30px 0 30px 0;
+      top: 450px;
+      left: -280px;
+      animation-delay: 1.7s;
+    }
+
+    .the-arrow5 {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 0px solid #697A8A;
+      border-bottom: 20px solid #697A8A;
+      position: absolute;
+      top: 0;
+      left: 250px;
+      transform: rotate(180deg);
+    }
+
+    .bubble6 {
+      height: 180px;
+      background-color: #8B8091;
+      border-radius: 0 30px 0 30px;
+      top: 509px;
+      left: 280px;
+      line-height: 1.8;
+      animation-delay: 1.8s;
+    }
+
+    .the-arrow6 {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 0px solid #8B8091;
+      border-bottom: 20px solid #8B8091;
+      position: absolute;
+      top: 0px;
+      left: -19px;
+      transform: rotateX(180deg);
+    }
+
+    .bubble7 {
+      height: 200px;
+      background-color: #B68EA6;
+      border-radius: 30px 0 30px 0;
+      top: 675px;
+      left: -280px;
+      animation-delay: 1.9s;
+    }
+
+    .the-arrow7 {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 0px solid #B68EA6;
+      border-bottom: 20px solid #B68EA6;
+      position: absolute;
+      top: 0;
+      left: 250px;
+      transform: rotate(180deg);
+    }
+
+    .bubble8 {
+      height: 180px;
+      background-color: #D99AB5;
+      border-radius: 30px 0 30px 0;
+      top: 853px;
+      left: 280px;
+      animation-delay: 2.0s;
+    }
+
+    .the-arrow8 {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 0px solid #D99AB5;
+      border-bottom: 20px solid #D99AB5;
+      position: absolute;
+      top: 160px;
+      left: -19px;
+    }
+
+    .bubble img {
+      border-radius: 20px 0 20px 0;
+      background: white;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .bubble:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="word_split wrapper">
+      <span class="word word1"> Antony </span>
+      <span class="word word2">Smith</span>
+      <span class="word word3">Personal</span>
+      <span class="word word4">Details</span>
+      <span class="word word5">Employment</span>
+      <span class="word word6">History </span>
+      <span class="word word7">Education</span>
+      <span class="word word8">Personal</span>
+      <span class="word word9">Skills </span>
+      <span class="word word10">Technical</span>
+      <span class="word word11">Skills </span>
+      <span class="word word12">Get In </span>
+      <span class="word word13">Touch</span>
+      
+      <div class="bubble1 bubble">
+        <span class="the-arrow1"></span>
+        HI! <br/> I AM..
+      </div>
+      
+      <div class="bubble2 bubble">
+        <span class="the-arrow2"></span>
+        <img src="pic.jpg" alt="Antony Smith"/>
+      </div>
+      
+      <div class="bubble3 bubble">
+        <span class="the-arrow3"></span>
+        NATIONALITY...<br/>
+        LOCATION...<br/>
+        BIRTHDAY...<br/>
+        HOBBIES<br/>
+        ETC...<br/>
+        ETC...<br/>
+      </div>
+      
+      <div class="bubble4 bubble">
+        <span class="the-arrow4"></span>
+        GRAPHIC DESIGNER 2005 - 2007<br/>
+        Lorem Ipsum dolor sit amet. Lorem Ipsum dolor.<br/><br/>
+        CREATIVE DIRECTOR 2008 - Current
+        <br/>
+        Lorem Ipsum dolor sit amet.
+      </div>
+      
+      <div class="bubble5 bubble">
+        <span class="the-arrow5"></span>
+        HIGH SCHOOL<br/>
+        Lorem Ipsum dolor sit amet<br/>
+        May 2004, GPA 1.5<br/><br/>
+        UNIVERSITY <br/>
+        Lorem Ipsum dolor sit amet<br/>
+        July 2007, GPA 1.5
+      </div>
+      
+      <div class="bubble6 bubble">
+        <span class="the-arrow6"></span>
+        SOCIAL COMMITMENT<br/>
+        ORGANIZATION<br/>
+        CREATIVITY<br/>
+        COMMUNICATION<br/>
+        TEAMWORK<br/>
+      </div>
+      
+      <div class="bubble7 bubble">
+        <span class="the-arrow7"></span>
+        PHOTOSHOP<br/>
+        ILLUSTRATOR<br/>
+        INDESIGN<br/>
+        FLASH<br/>
+        DREAMWEAVER<br/>
+        XHTML/CSS<br/>
+        JAVASCRIPT<br/>
+      </div>
+      
+      <div class="bubble8 bubble">
+        <span class="the-arrow8"></span>
+        PHONE...<br/>
+        EMAIL...<br/>
+        WEBSITE... <br/>
+        TWITTER...<br/>
+        FACEBOOK...<br/>
+        DRIBBBLE...<br/>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
